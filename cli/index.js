@@ -41,7 +41,7 @@ function Init (intro = true) {
         if (result && result.route && result.cost) {
           console.log(`✅ - best route: ${result.route} > $${result.cost} \n`)
         } else {
-          console.log('❌ - Route not found. Check if you types correctly!\n')
+          console.log('❌ - Route not found. Check if you typed correctly!\n')
         }
 
         Init(false)
