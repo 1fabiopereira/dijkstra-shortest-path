@@ -4,4 +4,4 @@
  * @author Fábio Pereira <fabio.pereira.gti@gmail.com>
  */
 require = require('esm')(module)
-module.exports = require('./app.js')
+module.exports = require('./cli/index')

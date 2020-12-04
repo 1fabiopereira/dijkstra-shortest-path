@@ -4,12 +4,14 @@
   "description": "Shortest path calculator",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint --fix ./src/*.js ./src/**/*.js ./src/**/**/*.js ./src/**/**/**/*.js"
+    "lint": "eslint --fix *.js ./common/**/*.js ./common/**/**/*.js ./common/**/**/**/*.js ./cli/*.js"
   },
   "author": "Fábio Pereira <fabio.pereira.gti@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "esm": "^3.2.25"
+    "csv-parser": "^3.0.0",
+    "esm": "^3.2.25",
+    "prompts": "^2.4.0"
   },
   "devDependencies": {
     "eslint": "^7.14.0",

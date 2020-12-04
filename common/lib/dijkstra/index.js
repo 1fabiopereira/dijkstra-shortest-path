@@ -8,7 +8,7 @@ import ObjectToMap from './utils/object-to-map'
 class Graph {
   // Initialize graph
   constructor (graph) {
-    this.graph = new Map()
+    this.graph = graph || new Map()
   }
 
   // Add node
@@ -76,7 +76,11 @@ class Graph {
     }
 
     path = path.concat([start])
-    return `${path.reverse().join(' - ')} > $${totalCost}`
+
+    return {
+      route: path.reverse().join(' - '),
+      cost: totalCost
+    }
   }
 }
 
