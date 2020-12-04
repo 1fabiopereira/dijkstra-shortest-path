@@ -25,6 +25,7 @@ function Init (intro = true) {
       })
 
       const { value } = response
+      const { map } = data
 
       if (value) {
         const graph = new Dijkstra()
@@ -32,8 +33,8 @@ function Init (intro = true) {
 
         // Populate the graph
         let node
-        for (node in data) {
-          graph.add(`${node}`, data[node])
+        for (node in map) {
+          graph.add(`${node}`, map[node])
         }
 
         const result = graph.path(start, end)

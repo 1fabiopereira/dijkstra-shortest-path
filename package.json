@@ -9,8 +9,13 @@
   "author": "Fábio Pereira <fabio.pereira.gti@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "body-parse": "^0.1.0",
     "csv-parser": "^3.0.0",
+    "csv-writer": "^1.6.0",
     "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "fast-csv": "^4.3.6",
+    "helmet": "^4.2.0",
     "prompts": "^2.4.0"
   },
   "devDependencies": {

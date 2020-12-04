@@ -10,7 +10,11 @@ function LoadCSV (path) {
   return new Promise((resolve, reject) => {
     fs.createReadStream(path)
       .pipe(csv(['start', 'end', 'cost']))
-      .on('data', (data) => results.push({ ...data, cost: Number(data.cost) }))
+      .on('data', (data) => {
+        if (data.start !== 'START' && data.end !== 'END' && data.cost !== 'COST') {
+          return results.push({ ...data, cost: Number(data.cost) })
+        }
+      })
       .on('error', reject)
       .on('end', () => {
         const map = {}
@@ -21,7 +25,7 @@ function LoadCSV (path) {
             : { [item.end]: item.cost }
         })
 
-        resolve(map)
+        resolve({ map, results })
       })
   })
 }
