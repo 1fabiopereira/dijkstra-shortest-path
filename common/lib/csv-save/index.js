@@ -1,6 +1,7 @@
 /**
  * @author Fábio Pereira <fabio.pereira.gti@gmail.com>
  */
+
 const { createObjectCsvWriter } = require('csv-writer')
 
 function SaveCSV (path, incoming) {

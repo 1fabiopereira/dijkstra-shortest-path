@@ -6,7 +6,6 @@ import Queue from './utils/queue'
 import ObjectToMap from './utils/object-to-map'
 
 class Graph {
-  // Initialize graph
   constructor (graph) {
     this.graph = graph || new Map()
   }

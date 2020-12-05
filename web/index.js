@@ -1,3 +1,7 @@
+/**
+ * @author Fábio Pereira <fabio.pereira.gti@gmail.com>
+ */
+
 import express from 'express'
 import helmet from 'helmet'
 import bodyParser from 'body-parser'

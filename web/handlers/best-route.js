@@ -1,6 +1,7 @@
 /**
  * @author Fábio Pereira <fabio.pereira.gti@gmail.com>
  */
+
 import Dijkstra from '../../common/lib/dijkstra'
 import LoadCSV from '../../common/lib/csv-loader'
 

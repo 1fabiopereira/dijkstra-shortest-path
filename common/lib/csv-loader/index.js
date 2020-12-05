@@ -1,6 +1,7 @@
 /**
  * @author Fábio Pereira <fabio.pereira.gti@gmail.com>
  */
+
 import csv from 'csv-parser'
 import fs from 'fs'
 

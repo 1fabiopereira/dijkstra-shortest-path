@@ -3,7 +3,6 @@
  */
 
 class Queue {
-  // Initialize keys and queue
   constructor () {
     this.keys = new Set()
     this.queue = []
