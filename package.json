@@ -4,7 +4,8 @@
   "description": "Shortest path calculator",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint --fix *.js ./common/**/*.js ./common/**/**/*.js ./common/**/**/**/*.js ./cli/*.js ./__tests__/**/*.js"
+    "lint": "eslint --fix *.js ./common/**/*.js ./common/**/**/*.js ./common/**/**/**/*.js ./cli/*.js ./__tests__/**/*.js",
+    "test": "mocha -r esm __tests__/**/*.spec.js"
   },
   "author": "Fábio Pereira <fabio.pereira.gti@gmail.com>",
   "license": "MIT",

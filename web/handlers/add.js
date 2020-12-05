@@ -16,6 +16,6 @@ export default (req, res) => {
 
     SaveCSV(path, results)
       .then((reply) => res.json({ ...reply }))
-      .catch((reply) => res.json({ ...reply }))
+      .catch((error) => res.json({ status: false, error: error.message }))
   })
 }

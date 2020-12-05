@@ -4,21 +4,31 @@
 
 const { createObjectCsvWriter } = require('csv-writer')
 
-function SaveCSV (path, incoming) {
-  return new Promise((resolve) => {
-    const csvWriter = createObjectCsvWriter({
-      path,
-      header: [
-        { id: 'start', title: 'START' },
-        { id: 'end', title: 'END' },
-        { id: 'cost', title: 'COST' }
-      ]
-    })
+function SaveCSV (path, data) {
+  return new Promise((resolve, reject) => {
+    try {
+      if (((path.split('/').pop()).split('.')).pop() !== 'csv') {
+        throw new Error('File extension is wrong.')
+      }
 
-    csvWriter
-      .writeRecords(incoming)
-      .then(() => resolve({ status: true }))
-      .catch(() => resolve({ status: false }))
+      if (!data || !Array.isArray(data) || !data.length || !data[0].start || !data[0].end || !data[0].cost) {
+        throw new Error('The data provided is incorrect.')
+      }
+
+      createObjectCsvWriter({
+        path,
+        header: [
+          { id: 'start', title: 'START' },
+          { id: 'end', title: 'END' },
+          { id: 'cost', title: 'COST' }
+        ]
+      })
+        .writeRecords(data)
+        .then(() => resolve({ status: true }))
+        .catch((err) => reject(err))
+    } catch (error) {
+      reject(error)
+    }
   })
 }
 

@@ -10,7 +10,7 @@ function LoadCSV (path) {
   return new Promise((resolve, reject) => {
     try {
       if (((path.split('/').pop()).split('.')).pop() !== 'csv') {
-        throw new Error('File format wrong.')
+        throw new Error('File extension is wrong.')
       }
 
       if (!fs.existsSync(path)) {

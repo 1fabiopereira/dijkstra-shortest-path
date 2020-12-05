@@ -17,7 +17,7 @@ describe('📌 LoadCSV', () => {
     results.must.not.be.empty()
   })
 
-  it('File not exist or Path is wrong', async () => {
+  it('File not exist or path is wrong', async () => {
     try {
       const path = 'file.csv'
       await LoadCSV(path)
@@ -27,13 +27,13 @@ describe('📌 LoadCSV', () => {
     }
   })
 
-  it('File format wrong', async () => {
+  it('Path have wrong extension', async () => {
     try {
       const path = 'file.json'
       await LoadCSV(path)
     } catch (error) {
       const { message } = error
-      must(message).to.be.equal('File format wrong.')
+      must(message).to.be.equal('File extension is wrong.')
     }
   })
 })
