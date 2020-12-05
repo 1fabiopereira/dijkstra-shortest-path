@@ -13,4 +13,4 @@ app.use(helmet())
 app.use(bodyParser.json())
 app.use(routes)
 
-app.listen(process.env.PORT || 3000, () => console.log(`Application started at port ${process.env.PORT || 3000}`))
+app.listen(process.env.PORT || 3000, () => console.log(`😎 - Application started at port ${process.env.PORT || 3000}`))

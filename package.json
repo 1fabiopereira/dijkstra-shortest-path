@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint --fix *.js ./common/**/*.js ./common/**/**/*.js ./common/**/**/**/*.js ./cli/*.js ./__tests__/**/*.js",
-    "test": "mocha -r esm __tests__/**/*.spec.js"
+    "tests": "mocha -r esm __tests__/**/*.spec.js"
   },
   "author": "Fábio Pereira <fabio.pereira.gti@gmail.com>",
   "license": "MIT",
@@ -15,7 +15,6 @@
     "csv-writer": "^1.6.0",
     "esm": "^3.2.25",
     "express": "^4.17.1",
-    "fast-csv": "^4.3.6",
     "helmet": "^4.2.0",
     "prompts": "^2.4.0"
   },
