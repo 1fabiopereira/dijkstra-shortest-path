@@ -51,7 +51,11 @@ class Graph {
 
       // Loop all the neighboring nodes
       const neighbors = this.graph.get(node.key) || new Map()
+
       neighbors.forEach((nCost, nNode) => {
+        // Prevent infinity loop
+        if (explored.has(nNode)) return null
+
         if (!frontier.has(nNode)) {
           previous.set(nNode, node.key)
           return frontier.set(nNode, node.priority + nCost)
