@@ -30,7 +30,7 @@ node cli.js ~/Desktop/rotas.csv
 ? Please enter the route: ›
 ```
 
-Agora com a aplicação executando basta entar com as consultas de rotas da seguinte maneira:
+Agora com a aplicação executando basta entrar com as consultas de rotas da seguinte maneira:
 
 ```
 ✔ Please enter the route: … GRU-CDG
@@ -38,13 +38,13 @@ Agora com a aplicação executando basta entar com as consultas de rotas da segu
 ? Please enter the route: ›
 ```
 
-caso a rota buscada não existir no arquivo ou não for encontrada será exibida a seguinte mensagem:
+caso a rota buscada não exista no arquivo ou não for encontrada será exibida a seguinte mensagem:
 
 ```
 ✔ Please enter the route: … GRU - EVZ
 ❌ - Route not found. Check if you typed correctly!
 ```
-- __note:__ Os espaços entre o ponto de origem e destino não influenciam na busca, no entanto maiúsculos e minúsculos tem influencia já que a aplicação é `case sensitive`;
+- __note:__ Os espaços entre o ponto de origem e destino não influenciam na busca, no entanto maiúsculas e minúsculas tem influencia já que a aplicação é `case sensitive`;
 
 Para finalizar a execução da aplicação basta precionar `CTRL + C`, com isso verá a seguinte saída:
 
@@ -73,7 +73,7 @@ Para obter a melhor rota e seu custo basta fazer uma requisição `GET` para a r
 curl http://localhost:3000\?route\=GRU-SCL
 ```
 
-Se tudo correr bem receberá uma saída em formato JSON com dois campos, sendo uma a melhor rota e o outro o custo da rota em questão. Assim como no exemplo abaixo:
+Se tudo ocorrer bem receberá uma saída em formato JSON com dois campos, sendo um a melhor rota e o outro o custo da rota em questão. Assim como no exemplo abaixo:
 
 ```
 {"route":"GRU - BRC - SCL","cost":15}
@@ -110,9 +110,9 @@ Para finalizar a execução da aplicação execute `CTRL + C` assim como feito n
 └── yarn.lock
 ```
 
-O projeto é dividido em 3 núcleo, sendo eles `common`, `cli` e `web`.
+O projeto é dividido em 3 núcleos, sendo eles `common`, `cli` e `web`.
 
-- `commom`: Como o próprio nome sugere é uma pasta onde encontra-se arquivos comum as demais partes da aplicação, é nesta pasta que encontra-se os módulos de leitura e escrita de arquivos CSVs e a implementação simplificado do algoritmo de [Dijkstra](https://pt.wikipedia.org/wiki/Algoritmo_de_Dijkstra#:~:text=O%20algoritmo%20de%20Dijkstra%2C%20concebido,e%20n%20%C3%A9%20o%20n%C3%BAmero%20de), utilizado para calcular a melhor rota entre os pontos.
+- `commom`: Como o próprio nome sugere é uma pasta onde encontra-se arquivos comuns as demais partes da aplicação, é nesta pasta que encontram-se os módulos de leitura e escrita de arquivos CSVs e a implementação simplificada do algoritmo de [Dijkstra](https://pt.wikipedia.org/wiki/Algoritmo_de_Dijkstra#:~:text=O%20algoritmo%20de%20Dijkstra%2C%20concebido,e%20n%20%C3%A9%20o%20n%C3%BAmero%20de), utilizado para calcular a melhor rota entre os pontos.
 
 - `cli`: Pasta que contem arquivos referentes a interface de execução em linha de comando.
 
@@ -120,13 +120,13 @@ O projeto é dividido em 3 núcleo, sendo eles `common`, `cli` e `web`.
 
 ## 🔶 Tests
 
-Para a execução dos testes é necessário estar dentro do repositório, ter instalado as dependências do projeto, feito isso, execute:
+Para a execução dos testes é necessário estar dentro do repositório e ter instalado as dependências do projeto, feito isso, execute:
 
 ```
 yarn run tests
 ```
 
-O resultado deve ser semelhante á:
+O resultado deve ser semelhante à:
 
 ```
 $ mocha -r esm __tests__/**/*.spec.js
